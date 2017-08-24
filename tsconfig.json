@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "strictNullChecks": false,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "declaration": true,
+        "outDir": "dist"
+    },
+    "include": [
+        "src"
+    ]
+}
