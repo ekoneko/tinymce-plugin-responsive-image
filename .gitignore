@@ -47,3 +47,4 @@ lib
 *.rar
 
 bundle.js
+package-lock.json
