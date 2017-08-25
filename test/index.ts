@@ -5,6 +5,8 @@ require('tinymce/plugins/image');
 require('tinymce/themes/modern');
 require('tinymce/skins/lightgray/skin.min.css');
 
+require('../src')
+
 interface Window {
     mocha: any;
     tinyMCE: any;
@@ -15,11 +17,12 @@ const tinyMCE = window.tinyMCE;
 
 window.tinyMCE.init({
     selector: '#editor',
+    width: 1000,
     theme: 'modern',
     skin: false,
     menubar: false,
     statusbar: false,
-    plugins: ['image'],
+    plugins: ['image', 'responsiveImage'],
     toolbar: 'undo redo | image',
     init_instance_callback: ed => {
         //

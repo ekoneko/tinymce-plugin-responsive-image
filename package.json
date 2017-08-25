@@ -17,6 +17,9 @@
     "url": "https://github.com/ekoneko/tinymce-plugin-responsive-image/issues"
   },
   "homepage": "https://github.com/ekoneko/tinymce-plugin-responsive-image#readme",
+  "peerDependencies": {
+    "tinymce": "^4.6.5"
+  },
   "devDependencies": {
     "@types/node": "^8.0.24",
     "awesome-typescript-loader": "^3.2.3",
