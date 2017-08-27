@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/node": "^8.0.24",
     "awesome-typescript-loader": "^3.2.3",
+    "chai": "^4.1.1",
     "css-loader": "^0.28.5",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",

@@ -43,10 +43,7 @@ async function transImgWidthToPrecent(
 
 window.tinyMCE.PluginManager.add('responsiveImage', function(editor) {
     editor.on('init', () => {
-        const imgs = editor.getBody().getElementsByTagName('img');
-        for (let i = 0; i < imgs.length; i++) {
-            transImgWidthToPrecent(imgs[i], () => editor.getBody().clientWidth);
-        }
+        this.resolveAll();
     });
 
     editor.on('NodeChange', (e) => {
@@ -55,4 +52,11 @@ window.tinyMCE.PluginManager.add('responsiveImage', function(editor) {
             transImgWidthToPrecent(img, () => editor.getBody().clientWidth);
         }
     });
+
+    this.resolveAll = () => {
+        const imgs = editor.getBody().getElementsByTagName('img');
+        for (let i = 0; i < imgs.length; i++) {
+            transImgWidthToPrecent(imgs[i], () => editor.getBody().clientWidth);
+        }
+    }
 });
