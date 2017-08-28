@@ -12,6 +12,7 @@ require('../src')
 
 interface Window {
     describe: any;
+    it: any;
     mocha: any;
     tinyMCE: any;
 }
@@ -32,7 +33,9 @@ window.tinyMCE.init({
             const img: HTMLImageElement = ed.getBody().getElementsByTagName('img')[0];
             img.onload = () => {
                 window.describe('img responsive', () => {
-                    expect(img.getAttribute('width')).to.equal('60%');
+                    window.it('init img', () => {
+                        expect(img.getAttribute('width')).to.equal('60%');
+                    })
                 });
                 mocha.run();
             }
