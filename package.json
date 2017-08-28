@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "sample": "cd test && webpack-dev-server",
+    "prepublish": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,9 @@
     "url": "https://github.com/ekoneko/tinymce-plugin-responsive-image/issues"
   },
   "homepage": "https://github.com/ekoneko/tinymce-plugin-responsive-image#readme",
+  "files": [
+    "lib"
+  ],
   "peerDependencies": {
     "tinymce": "^4.6.5"
   },
